@@ -22,7 +22,8 @@ namespace GridPuzzle.Presentation
 
         public void SetValue(int value, bool isWildcard)
         {
-            label.text = isWildcard ? "★" : value.ToString();
+            
+            label.text = isWildcard ? "*" : value.ToString();
             background.color = isWildcard ? wildcardColor : ColorForValue(value);
         }
 
