@@ -249,6 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 61585512}
+  - component: {fileID: 61585513}
   m_Layer: 5
   m_Name: BoardRoot
   m_TagString: Untagged
@@ -276,6 +277,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &61585513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61585511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc47d25648dc8448b0f9b92da4da36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridPuzzle.Presentation.GridView
+  boardRoot: {fileID: 61585512}
+  tilePrefab: {fileID: 1774694229950611286, guid: cb16d96b55c331f49b77489a49ee85ba, type: 3}
+  cellSize: 150
+  cellSpacing: 12
 --- !u!1 &262507771
 GameObject:
   m_ObjectHideFlags: 0
