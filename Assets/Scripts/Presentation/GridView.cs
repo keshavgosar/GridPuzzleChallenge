@@ -29,8 +29,14 @@ namespace GridPuzzle.Presentation
 
         private Vector2 AnchoredPosFor(GridCoord c)
         {
-            float x = c.Col * (cellSize + cellSpacing);
-            float y = -c.Row * (cellSize + cellSpacing);
+            float totalWidth = _cols * cellSize + (_cols - 1) * cellSpacing;
+            float totalHeight = _rows * cellSize + (_rows - 1) * cellSpacing;
+
+            float startX = -totalWidth / 2f + cellSize / 2f;
+            float startY = totalHeight / 2f - cellSize / 2f;
+
+            float x = startX + c.Col * (cellSize + cellSpacing);
+            float y = startY - c.Row * (cellSize + cellSpacing);
             return new Vector2(x, y);
         }
 
@@ -63,7 +69,6 @@ namespace GridPuzzle.Presentation
             {
                 if (!_views.TryGetValue(transition.From, out var view))
                     continue; // already consumed by an earlier transition sharing the same origin
-
 
                 _views.Remove(transition.From);
 
