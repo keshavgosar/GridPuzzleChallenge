@@ -144,6 +144,10 @@ Assets/
 ## Play in Editor
 You can play the game in editor by pressing the play button in top center.
 
+## Play in Android
+You can download the `.apk` file from the release tab of this repo and play it on your Android device.
+https://github.com/keshavgosar/GridPuzzleChallenge/releases/tag/v1.0-submission
+
 
 ## Running tests
 
